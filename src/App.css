@@ -1,8 +1,10 @@
+html {
+  background-color: #282c34;
+  overflow-x: hidden;
+}
 .App {
   text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-
+  
 }
 
 .App-logo {
@@ -25,6 +27,13 @@
 
 .nav-padding {
   padding-left: 7rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+
+}
+.webgl-content {
+  /* width: 960px; height: 600px */
+}
+.view-grid {
+  padding: 5vh;
 }

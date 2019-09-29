@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.3",
+    "assemblyscript": "github:AssemblyScript/assemblyscript",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.1.2",
+    "react-unity-webgl": "^7.1.7"
   },
   "scripts": {
     "start": "react-scripts start",
