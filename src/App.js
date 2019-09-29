@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <Grid container spacing={3}>
           <Grid item xs={6}>
-            <h3 className="nav-padding">Relativity</h3>
+            <h2 className="nav-padding">RelativityAR</h2>
           </Grid>
         </Grid>          
       </header>

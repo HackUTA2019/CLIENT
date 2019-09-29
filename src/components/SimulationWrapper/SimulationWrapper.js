@@ -26,20 +26,25 @@ class SimulationWrapper extends React.Component {
         .then(results => {
             return results.json();
         }).then(data => {
-            console.log(data);
-            this.state.sims = data;
-
-
+            // this.state.sims = data;
+            this.setState({
+                sims: data
+            })
         });
     }
 
     render() {
         let list = [1,2,3,3,3,3,3];
+        console.log(this.state.sims);
 
         return (
             <Grid container className="view-grid" spacing={12}>
-                <Grid item xl={4}>
-
+                <Grid className="items-grid" item xl={4}>
+                    {
+                        this.state.sims.map((cur, i) => {
+                            return <SimulationListItem sim={cur} />
+                        })
+                    }
                 </Grid>
 
                 <Grid item xl={8}>

@@ -6,52 +6,29 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-
-const useStyles = makeStyles({
-    card: {
-      minWidth: 275,
-    },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
-    },
-    title: {
-      fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
-    },
-  });
-
 class SimulationListItem extends React.Component {
     constructor(props) {
         super(props);
+
+        console.log(props);
     }
 
     render() {
         return (
-            <Card>
+            <Card className="sim-item">
                 <CardContent>
-                  <Typography color="textSecondary" gutterBottom>
-                    Word of the Day
-                  </Typography>
                   <Typography variant="h5" component="h2">
-                    be
-                    nev
-                    lent
+                    {this.props.sim.simulationName}
                   </Typography>
                   <Typography color="textSecondary">
-                    adjective
+                    {this.props.sim.studentName} - {this.props.sim.hash}
                   </Typography>
                   <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
+                    {this.props.sim.description || "Some random description here..."}
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Learn More</Button>
+                  <Button size="small">Load</Button>
                 </CardActions>
             </Card>
         );

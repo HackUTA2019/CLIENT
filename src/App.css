@@ -37,3 +37,14 @@ html {
 .view-grid {
   padding: 5vh;
 }
+
+.sim-item {
+  margin-left: 0rem;
+  margin-right: 6rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.items-grid {
+  height: 200px;
+}
