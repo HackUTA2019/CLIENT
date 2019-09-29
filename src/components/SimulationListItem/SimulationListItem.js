@@ -4,7 +4,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 
 class SimulationListItem extends React.Component {
     constructor(props) {
@@ -12,7 +11,9 @@ class SimulationListItem extends React.Component {
 
         console.log(props);
     }
-
+    sendNewHash(cur) {
+      window.updateHash(cur.hash);
+  }
     render() {
         return (
             <Card className="sim-item">
@@ -28,7 +29,7 @@ class SimulationListItem extends React.Component {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Load</Button>
+                  <Button size="small" onClick={() => this.sendNewHash(this.props.sim)}>Load</Button>
                 </CardActions>
             </Card>
         );

@@ -33,10 +33,12 @@ class SimulationWrapper extends React.Component {
         });
     }
 
-    render() {
-        let list = [1,2,3,3,3,3,3];
-        console.log(this.state.sims);
+    sendNewHash(cur) {
+        window.updateHash(cur.hash);
+    }
 
+    render() {
+        console.log(this.state.sims);
         return (
             <Grid container className="view-grid" spacing={12}>
                 <Grid className="items-grid" item xl={4}>
@@ -49,7 +51,7 @@ class SimulationWrapper extends React.Component {
 
                 <Grid item xl={8}>
                 {/* <Unity unityContent={this.unityContent} /> */}
-                <div class="webgl-content">
+                <div className="webgl-content">
       <div id="unityContainer"></div>
   </div>
                 
